@@ -4,22 +4,22 @@ import Matchup from '../components/Matchup'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'material-icons/iconfont/material-icons.css';
 
-let matchup = {
+const games = [{
   home_team: "Minnesota",
   away_team: "Maryland",
   home_logo: "http://a.espncdn.com/i/teamlogos/ncaa/500/135.png",
   away_logo: "http://a.espncdn.com/i/teamlogos/ncaa/500/120.png",
   home_mascot: "Golden Gophers",
   away_mascot: "Terpins"
-}
-// {
-//   home_team: "Minnesota-Duluth",
-//   away_team: "Michigan State",
-//   home_logo: "http://a.espncdn.com/i/teamlogos/ncaa/500/134.png",
-//   away_logo: "http://a.espncdn.com/i/teamlogos/ncaa/500/127.png",
-//   home_mascot: "Bulldogs",
-//   away_mascot: "Spartans"
-// }
+},
+{
+  home_team: "Minnesota-Duluth",
+  away_team: "Michigan State",
+  home_logo: "http://a.espncdn.com/i/teamlogos/ncaa/500/134.png",
+  away_logo: "http://a.espncdn.com/i/teamlogos/ncaa/500/127.png",
+  home_mascot: "Bulldogs",
+  away_mascot: "Spartans"
+}]
 
 export default function Home() {
   return (
@@ -31,7 +31,9 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <Matchup props={matchup}/>
+        {
+          games.map((matchup) => <Matchup matchup={matchup} />)
+        }
       </main>
 
       <footer className={styles.footer}>
