@@ -21,11 +21,6 @@ let matchup = {
 //   away_mascot: "Spartans"
 // }
 
-
-// const listItems = numbers.map((number) =>
-//   <li>{number}</li>
-// );
-
 export default function Home() {
   return (
     <div className={styles.container}>
